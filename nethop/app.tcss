@@ -1,0 +1,146 @@
+/* nethop — dark, dense, htop/btop-ish */
+
+Screen {
+    background: #0b0f14;
+    color: #c8d0d8;
+    layout: vertical;
+}
+
+#title-bar {
+    dock: top;
+    height: 1;
+    background: #121820;
+    color: #7dd3a7;
+    text-style: bold;
+    padding: 0 1;
+}
+
+/* Top hosts+actions ≈ 60% */
+#body {
+    height: 3fr;
+    layout: horizontal;
+}
+
+#left-pane {
+    width: 3fr;
+    border: tall #1e2a36;
+    background: #0d1218;
+}
+
+#right-pane {
+    width: 2fr;
+    border: tall #1e2a36;
+    background: #0d1218;
+}
+
+/* Bottom ports + terminal ≈ 40%; terminal gets the larger share */
+#lower {
+    height: 2fr;
+    layout: vertical;
+}
+
+#bottom-pane {
+    height: 2fr;
+    border: tall #1e2a36;
+    background: #0d1218;
+}
+
+#job-status {
+    height: 1;
+    background: #121820;
+    color: #e0b15a;
+    padding: 0 1;
+}
+
+#job-status.-idle {
+    color: #5a6a78;
+}
+
+#job-progress {
+    height: 0;
+    padding: 0;
+    background: #080c10;
+    display: none;
+}
+
+#job-progress.-active {
+    height: 1;
+    padding: 0 1;
+    display: block;
+}
+
+#log-pane {
+    height: 3fr;
+    border: tall #1e2a36;
+    background: #080c10;
+    color: #8a9aa8;
+}
+
+.pane-title {
+    background: #15202b;
+    color: #6ec6ff;
+    text-style: bold;
+    height: 1;
+    padding: 0 1;
+}
+
+HostTable, PortTable {
+    height: 1fr;
+    background: #0d1218;
+}
+
+HostTable > .datatable--cursor, PortTable > .datatable--cursor {
+    background: #1b3a4a;
+    color: #e8f4ff;
+    text-style: bold;
+}
+
+HostTable > .datatable--hover, PortTable > .datatable--hover {
+    background: #142230;
+}
+
+ActionList {
+    height: 1fr;
+    background: #0d1218;
+}
+
+ListItem {
+    padding: 0 1;
+    height: auto;
+}
+
+ListItem.-highlighted {
+    background: #1b3a4a;
+}
+
+ListItem.-running {
+    background: #1a3020;
+    border-left: thick #7dd3a7;
+}
+
+.action-item {
+    padding: 0 0 1 0;
+}
+
+#status {
+    dock: bottom;
+    height: 1;
+    background: #121820;
+    color: #9aa7b5;
+    padding: 0 1;
+}
+
+#status .key {
+    color: #7dd3a7;
+    text-style: bold;
+}
+
+Log {
+    height: 1fr;
+    scrollbar-size: 1 1;
+}
+
+.ok { color: #7dd3a7; }
+.warn { color: #e0b15a; }
+.err { color: #e06c75; }
+.cmd { color: #6ec6ff; }
