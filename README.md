@@ -80,10 +80,26 @@ pipx install .
 nethop
 ```
 
-Or without installing the script entrypoint:
+If Windows says `nethop` is not recognized, either:
+
+```powershell
+py -m nethop
+```
+
+or add your user Scripts folder to PATH (then open a **new** terminal):
+
+```text
+%APPDATA%\Python\Python314\Scripts
+```
+
+(Adjust `Python314` to match your Python version.)
+
+Or without the script entrypoint:
 
 ```bash
 python3 -m nethop
+# Windows:
+py -m nethop
 ```
 
 ## Keys / mouse
