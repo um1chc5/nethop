@@ -43,26 +43,33 @@ sudo pacman -S nmap
 brew install nmap
 ```
 
-## Install nethop (CLI)
+## Install (so `nethop` works as a command)
 
-Recommended: **[pipx](https://pipx.pypa.io/)** so the `nethop` command is isolated and on your PATH.
+These installers put `nethop` on your PATH so you only type:
 
-### From GitHub (all platforms)
+```bash
+nethop
+```
+
+### Windows (PowerShell)
+
+```powershell
+irm https://raw.githubusercontent.com/um1chc5/nethop/main/install.ps1 | iex
+```
+
+Then open a **new** PowerShell window if this one still cannot find `nethop`.
+
+### Linux / macOS
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/um1chc5/nethop/main/install.sh | bash
+```
+
+### Alternative: pipx (any OS)
 
 ```bash
 pipx install git+https://github.com/um1chc5/nethop.git
-```
-
-Or with pip (user install):
-
-```bash
-python3 -m pip install --user git+https://github.com/um1chc5/nethop.git
-```
-
-On Windows (PowerShell / cmd), if `python3` is not found:
-
-```bash
-py -m pip install --user git+https://github.com/um1chc5/nethop.git
+nethop
 ```
 
 ### From a local clone
@@ -70,36 +77,12 @@ py -m pip install --user git+https://github.com/um1chc5/nethop.git
 ```bash
 git clone https://github.com/um1chc5/nethop.git
 cd nethop
-pipx install .
-# or: python3 -m pip install -e .
-```
 
-### Run
+# Windows
+.\install.ps1
 
-```bash
-nethop
-```
-
-If Windows says `nethop` is not recognized, either:
-
-```powershell
-py -m nethop
-```
-
-or add your user Scripts folder to PATH (then open a **new** terminal):
-
-```text
-%APPDATA%\Python\Python314\Scripts
-```
-
-(Adjust `Python314` to match your Python version.)
-
-Or without the script entrypoint:
-
-```bash
-python3 -m nethop
-# Windows:
-py -m nethop
+# Linux / macOS
+chmod +x install.sh && ./install.sh
 ```
 
 ## Keys / mouse
