@@ -6,6 +6,8 @@ Discover devices on your Wi‑Fi / office LAN (including tech gear like k8s node
 
 **Use only on networks you own or are authorized to test.**
 
+![nethop discovering a LAN](docs/screenshot.png)
+
 ## Requirements
 
 | | |
