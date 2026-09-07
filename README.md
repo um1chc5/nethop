@@ -11,45 +11,18 @@ Discover devices on your Wi‑Fi/LAN, run common scans, open HTTP ports in a bro
 | | |
 |---|---|
 | Python | 3.10+ |
-| nmap | on your `PATH` |
+| nmap | on your `PATH` (installed by the scripts below if missing) |
 | OS | Windows, Linux (Ubuntu and others), macOS |
-
-### Install nmap
-
-**Ubuntu / Debian**
-
-```bash
-sudo apt update
-sudo apt install -y nmap
-```
-
-**Fedora**
-
-```bash
-sudo dnf install nmap
-```
-
-**Arch**
-
-```bash
-sudo pacman -S nmap
-```
-
-**Windows** — install from [nmap.org/download.html](https://nmap.org/download.html) (include Npcap when prompted).
-
-**macOS**
-
-```bash
-brew install nmap
-```
 
 ## Install (so `nethop` works as a command)
 
-These installers put `nethop` on your PATH so you only type:
+These installers install **nethop + nmap** and put `nethop` on your PATH so you only type:
 
 ```bash
 nethop
 ```
+
+They ask `Y/n` before installing missing system packages (default Yes). Unattended: set `NETHOP_YES=1` (bash) or `$env:NETHOP_YES = "1"` (PowerShell).
 
 ### Windows (PowerShell)
 
@@ -72,6 +45,7 @@ pipx install git+https://github.com/um1chc5/nethop.git
 nethop
 ```
 
+`pipx` installs only the Python app — use `install.sh` / `install.ps1` if you also need nmap.
 ### From a local clone
 
 ```bash
