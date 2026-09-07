@@ -30,7 +30,25 @@ class Port:
         name = self.service.lower()
         if any(k in name for k in ("http", "https", "ssl/http", "http-proxy")):
             return True
-        return self.number in {80, 443, 8000, 8008, 8080, 8443, 8888, 3000, 5000, 5173}
+        return self.number in {
+            80,
+            443,
+            3000,
+            3001,
+            4000,
+            4173,
+            4200,
+            5000,
+            5173,
+            5174,
+            8000,
+            8008,
+            8080,
+            8081,
+            8443,
+            8888,
+            9000,
+        }
 
 
 @dataclass
