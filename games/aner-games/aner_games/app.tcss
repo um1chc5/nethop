@@ -1,0 +1,315 @@
+/* layout only — colors live on App.-cassette / App.-cyberpunk */
+
+Screen {
+    layout: vertical;
+    overflow: hidden;
+}
+
+#title-bar {
+    dock: top;
+    height: 1;
+    text-style: bold;
+    padding: 0 1;
+}
+
+#chrome {
+    height: 1;
+    padding: 0 1;
+}
+
+#scan {
+    height: 1;
+    padding: 0 1;
+}
+
+#body {
+    height: 1fr;
+    layout: horizontal;
+}
+
+#menu-pane {
+    width: 1fr;
+}
+
+#logo-pane {
+    width: 1fr;
+    align: center middle;
+}
+
+#logo {
+    width: auto;
+    height: auto;
+    padding: 1 2;
+}
+
+.pane-title {
+    text-style: bold;
+    height: 1;
+    padding: 0 1;
+}
+
+DataTable {
+    height: 1fr;
+}
+
+#snake-wrap {
+    height: 1fr;
+}
+
+#snake-hud {
+    height: 1;
+    text-style: bold;
+    padding: 0 1;
+}
+
+#snake-board {
+    height: 1fr;
+    padding: 1 2;
+}
+
+/* --- Cassette Futurism: black CRT, high-contrast amber phosphor --- */
+
+App.-cassette {
+    background: #000000;
+    color: #FFF8C8;
+}
+
+App.-cassette #title-bar {
+    background: #000000;
+    color: #FFF8C8;
+    text-style: bold;
+}
+
+App.-cassette #chrome {
+    background: #000000;
+    color: #FF9A40;
+}
+
+App.-cassette #scan {
+    background: #000000;
+    color: #3A2400;
+}
+
+App.-cassette #menu-pane,
+App.-cassette #logo-pane,
+App.-cassette #snake-wrap {
+    background: #000000;
+    border: tall #FFF8C8;
+}
+
+App.-cassette .pane-title,
+App.-cassette #snake-hud {
+    background: #1A1200;
+    color: #FFF8C8;
+}
+
+App.-cassette DataTable {
+    background: #000000;
+    color: #FFF8C8;
+}
+
+App.-cassette DataTable > .datatable--cursor {
+    background: #FFF8C8;
+    color: #000000;
+    text-style: bold;
+}
+
+App.-cassette DataTable > .datatable--hover {
+    background: #1A1200;
+}
+
+App.-cassette Footer {
+    background: #000000;
+    color: #FFF8C8;
+}
+
+App.-cassette #snake-board {
+    background: #000000;
+    color: #FFF8C8;
+}
+
+/* --- Cassette Phosphor: Nostromo CRT — black field, bright P1 green --- */
+
+App.-phosphor {
+    background: #000000;
+    color: #00FF41;
+}
+
+App.-phosphor #title-bar {
+    background: #000000;
+    color: #00FF41;
+    text-style: bold;
+}
+
+App.-phosphor #chrome {
+    background: #000000;
+    color: #00FF41;
+}
+
+App.-phosphor #scan {
+    background: #000000;
+    color: #007A22;
+}
+
+App.-phosphor #menu-pane,
+App.-phosphor #logo-pane,
+App.-phosphor #snake-wrap {
+    background: #000000;
+    border: tall #00FF41;
+}
+
+App.-phosphor .pane-title,
+App.-phosphor #snake-hud {
+    background: #001A08;
+    color: #00FF41;
+    text-style: bold;
+}
+
+App.-phosphor DataTable {
+    background: #000000;
+    color: #00FF41;
+}
+
+App.-phosphor DataTable > .datatable--cursor {
+    background: #00FF41;
+    color: #000000;
+    text-style: bold;
+}
+
+App.-phosphor DataTable > .datatable--hover {
+    background: #001A08;
+}
+
+App.-phosphor Footer {
+    background: #000000;
+    color: #00FF41;
+}
+
+App.-phosphor #snake-board {
+    background: #000000;
+    color: #00FF41;
+}
+
+/* --- Sci-Fi Blue: black CRT + ice bloom (halo field, not flat navy) --- */
+
+App.-cyberpunk {
+    background: #000000;
+    color: #E8F7FF;
+}
+
+App.-cyberpunk #title-bar {
+    background: #000000;
+    color: #FFFFFF;
+    text-style: italic;
+}
+
+App.-cyberpunk #chrome {
+    background: #000000;
+    color: #88E0FF;
+}
+
+App.-cyberpunk #scan {
+    background: #000000;
+    color: #1A68B0;
+}
+
+App.-cyberpunk #menu-pane,
+App.-cyberpunk #logo-pane,
+App.-cyberpunk #snake-wrap {
+    background: #000000;
+    border: tall #88E0FF;
+}
+
+App.-cyberpunk .pane-title,
+App.-cyberpunk #snake-hud {
+    background: #082848;
+    color: #FFFFFF;
+    text-style: italic;
+}
+
+App.-cyberpunk DataTable {
+    background: #000000;
+    color: #E8F7FF;
+}
+
+App.-cyberpunk DataTable > .datatable--cursor {
+    background: #88E0FF;
+    color: #000000;
+    text-style: bold;
+}
+
+App.-cyberpunk DataTable > .datatable--hover {
+    background: #082848;
+}
+
+App.-cyberpunk Footer {
+    background: #000000;
+    color: #88E0FF;
+}
+
+App.-cyberpunk #snake-board {
+    background: #000000;
+    color: #E8F7FF;
+}
+
+/* --- Sci-Fi Red/White: mission HUD, white data, red bloom banners --- */
+
+App.-tactical {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+App.-tactical #title-bar {
+    background: #FF1A1A;
+    color: #FFFFFF;
+    text-style: bold;
+}
+
+App.-tactical #chrome {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+App.-tactical #scan {
+    background: #000000;
+    color: #4A0000;
+}
+
+App.-tactical #menu-pane,
+App.-tactical #logo-pane,
+App.-tactical #snake-wrap {
+    background: #000000;
+    border: tall #FF1A1A;
+}
+
+App.-tactical .pane-title,
+App.-tactical #snake-hud {
+    background: #1A0000;
+    color: #FFFFFF;
+    text-style: bold;
+}
+
+App.-tactical DataTable {
+    background: #000000;
+    color: #FFFFFF;
+}
+
+App.-tactical DataTable > .datatable--cursor {
+    background: #FF1A1A;
+    color: #FFFFFF;
+    text-style: bold;
+}
+
+App.-tactical DataTable > .datatable--hover {
+    background: #1A0000;
+}
+
+App.-tactical Footer {
+    background: #000000;
+    color: #FF6A6A;
+}
+
+App.-tactical #snake-board {
+    background: #000000;
+    color: #FFFFFF;
+}

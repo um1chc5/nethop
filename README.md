@@ -7,6 +7,7 @@ Terminal tools monorepo.
 | Path | Tool | What it does |
 |---|---|---|
 | [`networks/nethop`](networks/nethop/) | **nethop** | LAN explorer TUI (nmap-backed) |
+| [`games/aner-games`](games/aner-games/) | **aner-games** | Terminal game launcher — Snake playable; more planned (see [games README](games/aner-games/README.md#games)) |
 
 ## Quick install — nethop
 
@@ -31,8 +32,16 @@ cd aner-toolkits/networks/nethop
 ```
 aner-toolkits/
   networks/
-    nethop/     # LAN / nmap TUI
-  # future: more tools under networks/, containers/, …
+    nethop/        # LAN / nmap TUI
+  games/
+    aner-games/    # list → select → play
+```
+
+### aner-games
+
+```bash
+pipx install --editable ./games/aner-games
+aner-games
 ```
 
 ## License
