@@ -7,7 +7,7 @@ Terminal tools monorepo.
 | Path | Tool | What it does |
 |---|---|---|
 | [`networks/nethop`](networks/nethop/) | **nethop** | LAN explorer TUI (nmap-backed) |
-| [`games/aner-games`](games/aner-games/) | **aner-games** | Terminal game launcher — Snake playable; more planned (see [games README](games/aner-games/README.md#games)) |
+| [`games/aner-games`](games/aner-games/) | **aner-games** | Terminal game launcher — Snake, 2048, Tetris, Minesweeper, Sokoban, Wordle, typing race, packet chase |
 
 ## Quick install — nethop
 
@@ -37,11 +37,18 @@ aner-toolkits/
     aner-games/    # list → select → play
 ```
 
-### aner-games
+## Quick install — aner-games
 
 ```bash
-pipx install --editable ./games/aner-games
-aner-games
+curl -fsSL https://raw.githubusercontent.com/um1chc5/aner-toolkits/main/games/aner-games/install.sh | bash
+```
+
+Or from a clone:
+
+```bash
+git clone https://github.com/um1chc5/aner-toolkits.git
+cd aner-toolkits/games/aner-games
+./install.sh
 ```
 
 ## License

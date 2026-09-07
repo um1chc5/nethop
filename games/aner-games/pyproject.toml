@@ -1,6 +1,6 @@
 [project]
 name = "aner-games"
-version = "0.2.0"
+version = "0.3.0"
 description = "Terminal game launcher — pick a title and play"
 readme = "README.md"
 license = { text = "MIT" }
@@ -8,7 +8,7 @@ requires-python = ">=3.10"
 authors = [
     { name = "aner-toolkits contributors" },
 ]
-keywords = ["tui", "games", "snake", "terminal", "textual"]
+keywords = ["tui", "games", "snake", "tetris", "2048", "terminal", "textual"]
 classifiers = [
     "Development Status :: 3 - Alpha",
     "Environment :: Console",

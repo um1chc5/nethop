@@ -31,23 +31,34 @@ Extra files are fine (`levels.py`, `words.py`, …) when a game needs them.
 | Game | Folder | Status | Notes |
 |---|---|---|---|
 | **Snake** | `games/snake/` | **Playable** | arrows / WASD · space restart · t skin · q menu |
-| 2048 | `games/twenty48/` | Planned | Merge tiles, arrow keys |
-| Tetris | `games/tetris/` | Planned | Stack pieces, line clears |
-| Minesweeper | `games/mines/` | Planned | Grid + flags |
-| Sokoban | `games/sokoban/` | Planned | Push crates, text levels |
-| Wordle | `games/wordle/` | Planned | Five-letter guess |
-| Typing race | `games/typerace/` | Planned | WPM on a quote |
-| Packet chase | `games/packet/` | Planned | Catch packets on a fake LAN map |
+| **2048** | `games/twenty48/` | **Playable** | merge tiles · arrows / WASD · space restart |
+| **Tetris** | `games/tetris/` | **Playable** | ←→ move · ↑ rotate · ↓ soft · space hard drop |
+| **Minesweeper** | `games/mines/` | **Playable** | arrows · enter/space dig · f flag · r restart |
+| **Sokoban** | `games/sokoban/` | **Playable** | arrows · u undo · n next room · r restart |
+| **Wordle** | `games/wordle/` | **Playable** | type + enter · esc menu (q is a letter) |
+| **Typing race** | `games/typerace/` | **Playable** | type the quote · esc menu · WPM |
+| **Packet chase** | `games/packet/` | **Playable** | catch packets · arrows / WASD · 3 lives |
 
 The launcher menu only lists **Playable** titles.
 
 ## Install
 
-From this monorepo:
+```bash
+curl -fsSL https://raw.githubusercontent.com/um1chc5/aner-toolkits/main/games/aner-games/install.sh | bash
+```
+
+Or from a clone:
 
 ```bash
-pipx install --editable games/aner-games
-# or from repo root:
+cd games/aner-games
+./install.sh
+```
+
+Non-interactive: `ANER_GAMES_YES=1 ./install.sh`
+
+pipx from this monorepo:
+
+```bash
 pipx install --editable ./games/aner-games
 ```
 

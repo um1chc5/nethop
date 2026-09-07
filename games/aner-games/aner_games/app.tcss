@@ -52,17 +52,20 @@ DataTable {
     height: 1fr;
 }
 
-#snake-wrap {
+#snake-wrap,
+#game-wrap {
     height: 1fr;
 }
 
-#snake-hud {
+#snake-hud,
+#game-hud {
     height: 1;
     text-style: bold;
     padding: 0 1;
 }
 
-#snake-board {
+#snake-board,
+#game-board {
     height: 1fr;
     padding: 1 2;
 }
@@ -92,13 +95,15 @@ App.-cassette #scan {
 
 App.-cassette #menu-pane,
 App.-cassette #logo-pane,
-App.-cassette #snake-wrap {
+App.-cassette #snake-wrap,
+App.-cassette #game-wrap {
     background: #000000;
     border: tall #FFF8C8;
 }
 
 App.-cassette .pane-title,
-App.-cassette #snake-hud {
+App.-cassette #snake-hud,
+App.-cassette #game-hud {
     background: #1A1200;
     color: #FFF8C8;
 }
@@ -123,7 +128,8 @@ App.-cassette Footer {
     color: #FFF8C8;
 }
 
-App.-cassette #snake-board {
+App.-cassette #snake-board,
+App.-cassette #game-board {
     background: #000000;
     color: #FFF8C8;
 }
@@ -153,13 +159,15 @@ App.-phosphor #scan {
 
 App.-phosphor #menu-pane,
 App.-phosphor #logo-pane,
-App.-phosphor #snake-wrap {
+App.-phosphor #snake-wrap,
+App.-phosphor #game-wrap {
     background: #000000;
     border: tall #00FF41;
 }
 
 App.-phosphor .pane-title,
-App.-phosphor #snake-hud {
+App.-phosphor #snake-hud,
+App.-phosphor #game-hud {
     background: #001A08;
     color: #00FF41;
     text-style: bold;
@@ -185,7 +193,8 @@ App.-phosphor Footer {
     color: #00FF41;
 }
 
-App.-phosphor #snake-board {
+App.-phosphor #snake-board,
+App.-phosphor #game-board {
     background: #000000;
     color: #00FF41;
 }
@@ -215,13 +224,15 @@ App.-cyberpunk #scan {
 
 App.-cyberpunk #menu-pane,
 App.-cyberpunk #logo-pane,
-App.-cyberpunk #snake-wrap {
+App.-cyberpunk #snake-wrap,
+App.-cyberpunk #game-wrap {
     background: #000000;
     border: tall #88E0FF;
 }
 
 App.-cyberpunk .pane-title,
-App.-cyberpunk #snake-hud {
+App.-cyberpunk #snake-hud,
+App.-cyberpunk #game-hud {
     background: #082848;
     color: #FFFFFF;
     text-style: italic;
@@ -247,7 +258,8 @@ App.-cyberpunk Footer {
     color: #88E0FF;
 }
 
-App.-cyberpunk #snake-board {
+App.-cyberpunk #snake-board,
+App.-cyberpunk #game-board {
     background: #000000;
     color: #E8F7FF;
 }
@@ -277,13 +289,15 @@ App.-tactical #scan {
 
 App.-tactical #menu-pane,
 App.-tactical #logo-pane,
-App.-tactical #snake-wrap {
+App.-tactical #snake-wrap,
+App.-tactical #game-wrap {
     background: #000000;
     border: tall #FF1A1A;
 }
 
 App.-tactical .pane-title,
-App.-tactical #snake-hud {
+App.-tactical #snake-hud,
+App.-tactical #game-hud {
     background: #1A0000;
     color: #FFFFFF;
     text-style: bold;
@@ -309,7 +323,8 @@ App.-tactical Footer {
     color: #FF6A6A;
 }
 
-App.-tactical #snake-board {
+App.-tactical #snake-board,
+App.-tactical #game-board {
     background: #000000;
     color: #FFFFFF;
 }

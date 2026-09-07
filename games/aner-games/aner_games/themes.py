@@ -27,6 +27,9 @@ class Theme:
     snake_play: str
     snake_over: str
     snake_win: str
+    run: str
+    fault: str
+    lock: str
     snake: SnakeLook
 
 
@@ -60,6 +63,9 @@ CASSETTE = Theme(
     snake_play="REEL  ·  SCORE {score}  ·  RUNNING",
     snake_over="TAPE EJECT  ·  SCORE {score}  ·  SPACE RECUE",
     snake_win="SPLICED  ·  SCORE {score}  ·  FULL REEL",
+    run="REEL  ·  {msg}  ·  RUNNING",
+    fault="TAPE EJECT  ·  {msg}  ·  SPACE RECUE",
+    lock="SPLICED  ·  {msg}  ·  FULL REEL",
     snake=SnakeLook(
         food=("◎ ", "bold #FF9A40"),
         head=("██", "bold #FFF8C8"),
@@ -80,6 +86,9 @@ PHOSPHOR = Theme(
     snake_play="STATUS // RUN   ·   SCORE {score}   ·   NORMAL █",
     snake_over="STATUS // FAULT   ·   SCORE {score}   ·   SPACE RECUE",
     snake_win="STATUS // LOCK   ·   SCORE {score}   ·   CLEAR",
+    run="STATUS // RUN   ·   {msg}   ·   NORMAL █",
+    fault="STATUS // FAULT   ·   {msg}   ·   SPACE RECUE",
+    lock="STATUS // LOCK   ·   {msg}   ·   CLEAR",
     snake=SnakeLook(
         food=("+ ", "bold #CCFFCC"),
         head=("██", "bold #00FF41"),
@@ -100,6 +109,9 @@ CYBERPUNK = Theme(
     snake_play="NAV  ·  SCORE {score}  ·  LIVE",
     snake_over="LOST  ·  SCORE {score}  ·  SPACE REBOOT",
     snake_win="LOCK  ·  SCORE {score}  ·  CLEAR",
+    run="NAV  ·  {msg}  ·  LIVE",
+    fault="LOST  ·  {msg}  ·  SPACE REBOOT",
+    lock="LOCK  ·  {msg}  ·  CLEAR",
     snake=SnakeLook(
         food=("* ", "bold #FFFFFF"),
         head=("██", "bold #FFFFFF"),
@@ -120,6 +132,9 @@ TACTICAL = Theme(
     snake_play="STATUS // LIVE   ·   SCORE {score}   ·   TRACKING",
     snake_over="STATUS // FAULT   ·   SCORE {score}   ·   SPACE REBOOT",
     snake_win="STATUS // LOCK   ·   SCORE {score}   ·   CLEAR",
+    run="STATUS // LIVE   ·   {msg}   ·   TRACKING",
+    fault="STATUS // FAULT   ·   {msg}   ·   SPACE REBOOT",
+    lock="STATUS // LOCK   ·   {msg}   ·   CLEAR",
     snake=SnakeLook(
         food=("+ ", "bold #FF6A6A"),
         head=("██", "bold #FFFFFF"),
