@@ -84,8 +84,7 @@ After a port scan, nethop guesses a **role** from ports/hostname (e.g. `k8s`, `p
 
 - Fast ports (`-F`)
 - Common ports
-- Dev web ports — Vite `5173`, Next/`3000`, Flask/`5000`, common `8xxx`, …
-- Range **3xxx** (`3000–3999`), **5xxx** (`5000–5999`), **8xxx** (`8000–8999`)
+- Wide scan — `3000–3999` + `5000–5999` (Vite `5173`) + `8000–8999`
 - Service versions (`-sV`)
 - Default scripts (`-sC`)
 - OS detect (`-O`) — often needs admin/root
