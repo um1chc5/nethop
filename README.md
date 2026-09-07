@@ -2,7 +2,7 @@
 
 Interactive LAN explorer — an **htop/btop-style terminal UI** over [`nmap`](https://nmap.org/).
 
-Discover devices on your Wi‑Fi/LAN, run common scans, open HTTP ports in a browser.
+Discover devices on your Wi‑Fi / office LAN (including tech gear like k8s nodes, DBs, bastions), run common scans, open HTTP ports in a browser.
 
 **Use only on networks you own or are authorized to test.**
 
@@ -46,6 +46,7 @@ nethop
 ```
 
 `pipx` installs only the Python app — use `install.sh` / `install.ps1` if you also need nmap.
+
 ### From a local clone
 
 ```bash
@@ -64,11 +65,18 @@ chmod +x install.sh && ./install.sh
 | Input | Action |
 |-------|--------|
 | `d` / `r` | Discover hosts on LAN (`nmap -sn`) |
+| `i` | Pick network interface / CIDR (skips VPN `/32` tunnels when possible) |
+| `n` | Set / clear nickname for selected host (saved under `~/.config/nethop/`) |
+| `w` | Toggle watch mode (auto rediscover; bell on new hosts) |
+| `m` | Toggle LAN map (hosts grouped by role) vs ports |
+| `c` / `C` | Copy markdown host card / all-hosts summary to clipboard |
 | ↑↓ / click | Select host, action, or port |
 | `Enter` | Run selected scan on selected host |
 | `o` / double-click port | Open port URL in browser |
 | `Tab` | Cycle focus |
 | `q` | Quit |
+
+After a port scan, nethop guesses a **role** from ports/hostname (e.g. `k8s`, `postgres`, `docker`, `bastion`, `ssh`).
 
 ## Scan actions
 
@@ -86,11 +94,14 @@ nethop/
   app.py           # Textual UI
   app.tcss         # theme
   models.py        # Host / Port / profiles
-  network.py       # detect local CIDR
+  network.py       # VPN-aware LAN / iface detect
+  roles.py         # tech-LAN role heuristics
+  state.py         # nicknames + watch prefs
+  export.py        # markdown cards + clipboard
   nmap_client.py   # nmap subprocess + XML
   scans.py         # named scan profiles
   browser.py       # open URLs
-  widgets/         # HostTable, PortTable, ActionList
+  widgets/         # HostTable, PortTable, ActionList, LanMap, modals
 ```
 
 ## License

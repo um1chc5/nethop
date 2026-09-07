@@ -13,7 +13,7 @@ class HostTable(DataTable):
     def on_mount(self) -> None:
         self.cursor_type = "row"
         self.zebra_stripes = True
-        self.add_columns("IP", "Hostname", "Vendor / MAC", "Ports")
+        self.add_columns("IP", "Name", "Role", "Vendor / MAC", "Ports")
         self._ips: list[str] = []
 
     def set_hosts(self, hosts: list[Host], selected_ip: str | None = None) -> None:
@@ -23,9 +23,11 @@ class HostTable(DataTable):
         for i, host in enumerate(hosts):
             open_n = sum(1 for p in host.ports if p.state == "open")
             vendor = host.vendor or host.mac or "—"
+            ip_col = f"*{host.ip}" if host.is_new else host.ip
             self.add_row(
-                host.ip,
-                host.hostname or "—",
+                ip_col,
+                host.label_name,
+                host.role or "—",
                 vendor,
                 str(open_n) if open_n else "—",
                 key=host.ip,

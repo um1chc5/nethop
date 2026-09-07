@@ -144,3 +144,21 @@ Log {
 .warn { color: #e0b15a; }
 .err { color: #e06c75; }
 .cmd { color: #6ec6ff; }
+
+.-hidden {
+    display: none;
+}
+
+#title-bar.-flash {
+    background: #2a4030;
+    color: #b6f0c8;
+}
+
+LanMap {
+    height: 1fr;
+}
+
+PortTable.-hidden,
+LanMap.-hidden {
+    display: none;
+}
