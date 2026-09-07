@@ -30,9 +30,9 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/um1chc5/nethop"
-Repository = "https://github.com/um1chc5/nethop"
-Issues = "https://github.com/um1chc5/nethop/issues"
+Homepage = "https://github.com/um1chc5/aner-toolkits"
+Repository = "https://github.com/um1chc5/aner-toolkits"
+Issues = "https://github.com/um1chc5/aner-toolkits/issues"
 
 [project.scripts]
 nethop = "nethop.app:run"

@@ -1,6 +1,6 @@
 # Install nethop + nmap (and Python/pip if needed) so `nethop` works from a new terminal.
 # Usage (PowerShell):
-#   irm https://raw.githubusercontent.com/um1chc5/nethop/main/install.ps1 | iex
+#   irm https://raw.githubusercontent.com/um1chc5/aner-toolkits/main/networks/nethop/install.ps1 | iex
 # Or from a clone:
 #   .\install.ps1
 #
@@ -129,7 +129,7 @@ if (-not $pipOk) {
     }
 }
 
-py -m pip install --user --upgrade "git+https://github.com/um1chc5/nethop.git"
+py -m pip install --user --upgrade "git+https://github.com/um1chc5/aner-toolkits.git#subdirectory=networks/nethop"
 
 $py = py -c "import sysconfig; print(sysconfig.get_path('scripts', 'nt_user'))"
 if (-not $py) {

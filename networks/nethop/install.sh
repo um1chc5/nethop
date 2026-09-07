@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install nethop + nmap (and Python/pip if needed) so `nethop` is on PATH.
 # Usage:
-#   curl -fsSL https://raw.githubusercontent.com/um1chc5/nethop/main/install.sh | bash
+#   curl -fsSL https://raw.githubusercontent.com/um1chc5/aner-toolkits/main/networks/nethop/install.sh | bash
 # Or from a clone:
 #   chmod +x install.sh && ./install.sh
 #
@@ -132,7 +132,7 @@ ensure_nmap
 ensure_pip
 
 if have pipx; then
-  pipx install --force git+https://github.com/um1chc5/nethop.git
+  pipx install --force git+https://github.com/um1chc5/aner-toolkits.git#subdirectory=networks/nethop
   echo
   echo "OK — run:  nethop"
   exit 0
@@ -143,7 +143,7 @@ if confirm "pipx is not installed (recommended). Install pipx and use it?"; then
   python3 -m pipx ensurepath || true
   export PATH="$(python3 -m site --user-base)/bin:$PATH"
   if have pipx; then
-    pipx install --force git+https://github.com/um1chc5/nethop.git
+    pipx install --force git+https://github.com/um1chc5/aner-toolkits.git#subdirectory=networks/nethop
     echo
     echo "OK — run:  nethop"
     echo "(New terminals pick up pipx via PATH.)"
@@ -152,7 +152,7 @@ if confirm "pipx is not installed (recommended). Install pipx and use it?"; then
   echo "pipx not on PATH yet; falling back to pip --user."
 fi
 
-python3 -m pip install --user --upgrade "git+https://github.com/um1chc5/nethop.git"
+python3 -m pip install --user --upgrade "git+https://github.com/um1chc5/aner-toolkits.git#subdirectory=networks/nethop"
 
 # User scripts dir (PEP 370)
 SCRIPTS="$(python3 -c 'import sysconfig; print(sysconfig.get_path("scripts", "posix_user") or "")')"
