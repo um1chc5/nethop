@@ -1,4 +1,5 @@
 # Install nethop + nmap (and Python/pip if needed) so `nethop` works from a new terminal.
+# Uses pip --user (does not install pipx).
 # Usage (PowerShell):
 #   irm https://raw.githubusercontent.com/um1chc5/aner-toolkits/main/networks/nethop/install.ps1 | iex
 # Or from a clone:
