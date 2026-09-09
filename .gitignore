@@ -19,9 +19,6 @@ env/
 *.swp
 .DS_Store
 
-# Local notes (not for public release)
-IDEAS.md
-
 # Test / coverage
 .coverage
 htmlcov/
